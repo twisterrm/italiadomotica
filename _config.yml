@@ -23,7 +23,7 @@ description              : "Una risorsa italiana su Home Assistant."
 url                      : "https://www.italiadomotica.it"
 enforce_ssl              : "italiadomotica.it"
 baseurl                  : "/"
-repository               : "twisterrm/github.io"
+repository               : "twisterrm/italiadomotica"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -301,6 +301,3 @@ defaults:
       comments: # true
       share: true
       related: true
-
-deploy:
-- rsync -a ./ /var/www/html/
