@@ -35,11 +35,11 @@ source bin/activate
 Ed installiamo i moduli python necessari
 
 {% highlight sh %}
-pip3 install bluepy 
+pip3 install bluepy
 pip3 install btlewrap
 {% endhighlight %}
 
-Una volta finita l’installazione dei moduli usciamo dal virtual environment con 
+Una volta finita l’installazione dei moduli usciamo dal virtual environment con
 
 {% highlight sh %}
 exit
@@ -64,7 +64,7 @@ C4:7C:8D:66:22:57 Flower care
 4C:65:A8:DC:88:B5 (unknown)
 4C:65:A8:DC:88:B5 MJ_HT_V1
 E8:9E:B4:18:C7:34 (unknown)
-{% endhighlight %} 
+{% endhighlight %}
 
 A noi interessa il dispositivo con il nome *MJ_HT_V1*, copiamone il MAC address (la serie di 6 caratteri alfanumerici accanto al nome).
 
@@ -74,23 +74,23 @@ Possiamo tranquillamente chiudere il nostro terminale ed aprire il nostro editor
 - platform: mitemp_bt
   mac: 4C:65:A8:DC:88:B5
   name: Temperatura Casa
-  force_update: false 
+  force_update: false
   median: 3
-  monitored_conditions: 
+  monitored_conditions:
     - temperature
     - humidity
     - battery
 {% endhighlight %}
- 
+
 *platform* è il nome della piattaforma e va lasciato così
 
 *mac* è il MAC address che abbiamo copiato dopo la scansione
 
 *name* è il nome che vogliamo assegnare al sensore su Home Assistant
 
-*force_update: false* fa si che non venga inviato un cambio di stato dal sensore se non vi è stata una variazione (se la temperatura è fissa a 20° non lo invierà ogni volta) 
+*force_update: false* fa si che non venga inviato un cambio di stato dal sensore se non vi è stata una variazione (se la temperatura è fissa a 20° non lo invierà ogni volta)
 
-*median: 3* fa si che venga inviata la misura media di 3 rilevazioni per evitare spike (ad esempio una finestra aperta per poco tempo) che potrebbero falsare la lettura 
+*median: 3* fa si che venga inviata la misura media di 3 rilevazioni per evitare spike (ad esempio una finestra aperta per poco tempo) che potrebbero falsare la lettura
 
 *monitored_condition* sono i valori che possiamo controllare (in questo caso solo i tre impostati)
 
@@ -110,9 +110,9 @@ default_view:
     - group.thermostat
     - group.temperatura
     - group.lights_corridoio
- 
+
  [...]
- 
+
 temperatura:
   name: Temperatura
   entities:
@@ -121,7 +121,7 @@ temperatura:
     - sensor.temperatura_casa_battery
 {% endhighlight %}
 
-E ricaricare i gruppi di Home Assistant 
+E ricaricare i gruppi di Home Assistant.
 
 ![Temperatura](/assets/images/temperatura.png)
 
