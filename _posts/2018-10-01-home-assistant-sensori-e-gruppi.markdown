@@ -11,7 +11,7 @@ Impostiamo il sensore di [Dark Sky](https://www.darksky.net) per le previsioni m
 
 I sensori sono tutti quegli oggetti che ci restituiscono un valore e possono essere monitorati, e grazie ai quali creeremo più avanti delle automazioni.
 
-I gruppi invece ci permetteranno di rendere più ordinata la nostra UI, raggruppare e rendere più presentabile la nostra installazione di home assistant.
+I gruppi invece ci permetteranno di rendere più ordinata la nostra UI, raggruppare e rendere più presentabile la nostra installazione di Home Assistant.
 
 Utilizzeremo file separati di configurazione riprendendo i concetti espressi nei video precedenti.
 
